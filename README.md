@@ -24,7 +24,7 @@ Custom [Polymer](http://polymer-project.org/) element for displaying [coderwall]
 
 2. Start using it!
 
-`<coder-wall package="package_name"> </coder-wall>`
+`<coder-wall coder=""> </coder-wall>`
 
 
 __TODO:__
