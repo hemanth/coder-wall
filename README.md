@@ -1,6 +1,6 @@
-# &lt;npm-info&gt;
+# &lt;coder-wall&gt;
 
-Custom [Polymer](http://polymer-project.org/) element for displaying coderwall badges for a given user.
+Custom [Polymer](http://polymer-project.org/) element for displaying [coderwall](http://coderwall.com) badges for a given user.
 
 > Maintained by [Hemanth.HM](http://github.com/hemanth)
 
