@@ -1,0 +1,53 @@
+
+<link rel="import" href="../bower_components/polymer/polymer.html"> 
+<link rel="import" href="../bower_components/polymer-jsonp/polymer-jsonp.html"> 
+<polymer-element name="coder-wall" attributes="coder">
+    <template>
+        <style>
+            * {
+                box-sizing: border-box;    
+            }
+           
+            .badge {
+             display:inline-block;
+             margin:5px 50px;
+             padding:5px;
+            }
+            
+            span {
+              display:table;
+              margin:0 auto;
+            }
+            
+            img {height:65px; width:65px;}
+            
+        </style>
+
+        <polymer-jsonp id="ajax" auto url="https://coderwall.com/{{coder}}.json?callback=" response="{{response}}"></polymer-jsonp>
+    
+        <span><a href="https://coderwall.com/{{response.username}}">{{response.username}}</a></span>
+
+        <div class="content">
+          <template repeat="{{badge in response.badges}}">
+            <div class="badge">
+              <img src={{badge.badge}} title={{badge.name}}:{{badge.description}}>
+            </div>
+         </template>
+      </div>
+
+    </template>
+    <script>
+        Polymer('coder-wall', {
+            ready: function () {
+               this.$.ajax.addEventListener('polymer-response',function(data){
+                    window.data = data;
+                    this.response = data.detail.response.data
+               })
+            },
+            /*responseChanged: function() {
+              console.log(this.response);
+              debugger;
+            }*/
+        });
+    </script>
+</polymer-element>
