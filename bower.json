@@ -5,7 +5,11 @@
     "Hemanth.HM <hemanth.hm@gmail.com>"
   ],
   "description": "Custom Polymer element for displaying coderwall badges for a given user.",
-  "keywords": "web-components, coderwall, ploymer",
+  "keywords": [
+    "web-components", 
+    "coderwall", 
+    "ploymer"
+  ],
   "main": "index.html",
   "license": "MIT",
   "homepage": "http://h3manth.com/",
